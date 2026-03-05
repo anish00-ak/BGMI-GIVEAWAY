@@ -61,6 +61,19 @@
 
 </section>
 
+<!-- ===== WARNING MODAL ===== -->
+<div class="warning-modal" id="warningBox">
+  <div class="warning-content">
+    <h2>⚠ Important Notice</h2>
+    <p>Please login with your main account to participate in this giveaway.</p>
+
+    <div class="warning-buttons">
+      <button class="cancel-btn" onclick="closeWarning()">Cancel</button>
+      <button class="proceed-btn" onclick="confirmJoin()">Continue</button>
+    </div>
+  </div>
+</div>
+
 <!-- ===== SCRIPT ===== -->
 <script>
 
@@ -78,15 +91,7 @@ setInterval(function(){
   if(time > 0) time--;
 }, 1000);
 
-// Fake Decreasing RP Counter
-let rp = 7;
-setInterval(function(){
-  if(rp > 1){
-    rp--;
-    document.getElementById("rpCount").innerText = rp;
-  }
-}, 15000);
-
+// Warning Modal Functions
 function openWarning() {
   document.getElementById("warningBox").style.display = "flex";
 }
@@ -101,22 +106,6 @@ function confirmJoin() {
 }
 
 </script>
-<!-- WARNING MODAL -->
-<div class="warning-modal" id="warningBox">
-  <div class="warning-content">
-    <h2>⚠ Important Notice</h2>
-    <p>Please login with your main account to participate in this giveaway.</p>
-
-    <div class="warning-buttons">
-      <button class="cancel-btn" onclick="closeWarning()">Cancel</button>
-      <button class="proceed-btn" onclick="confirmJoin()">Continue</button>
-    </div>
-  </div>
-</div>
-</script>
-
-
 
 </body>
 </html>
-
