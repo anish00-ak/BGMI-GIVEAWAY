@@ -46,7 +46,7 @@
     <h3>Royale Pass Giveaway</h3>
     <div class="icon">🏆</div>
     <p>Win a brand new Royale Pass. Limited entries only!</p>
-    <button class="primary">PARTICIPATE NOW</button>
+    <button class="primary" onclick="openWarning()">PARTICIPATE NOW</button>
   </div>
 
   <!-- Closed Giveaway -->
@@ -87,8 +87,35 @@ setInterval(function(){
   }
 }, 15000);
 
+function openWarning() {
+  document.getElementById("warningBox").style.display = "flex";
+}
+
+function closeWarning() {
+  document.getElementById("warningBox").style.display = "none";
+}
+
+function confirmJoin() {
+  closeWarning();
+  alert("PLEASE LOGIN");
+}
+
 </script>
+
+</script>
+<!-- WARNING MODAL -->
+<div class="warning-modal" id="warningBox">
+  <div class="warning-content">
+    <h2>⚠ Important Notice</h2>
+    <p>Please login with your main account to participate in this giveaway.</p>
+
+    <div class="warning-buttons">
+      <button class="cancel-btn" onclick="closeWarning()">Cancel</button>
+      <button class="proceed-btn" onclick="confirmJoin()">Continue</button>
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>
-
